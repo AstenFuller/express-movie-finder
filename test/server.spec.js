@@ -29,21 +29,21 @@ function withMovie(i) {
 
 
 mock
-  .onGet('http://www.omdbapi.com', { params: { i: 'tt3896198', apiKey: '8730e0e' }})
+  .onGet('http://www.omdbapi.com', { params: { i: 'tt3896198', apiKey: 'c5450c03' }})
   .replyOnce(withMovie(0))
-	.onGet('http://www.omdbapi.com/', { params: { i: 'tt3896198', apiKey: '8730e0e' }})
+	.onGet('http://www.omdbapi.com/', { params: { i: 'tt3896198', apiKey: 'c5450c03' }})
   .replyOnce(withMovie(0))
-  .onGet('http://www.omdbapi.com/?i=tt3896198&apikey=8730e0e')
+  .onGet('http://www.omdbapi.com/?i=tt3896198&apikey=c5450c03')
   .replyOnce(withMovie(0))
-  .onGet('http://www.omdbapi.com/?apikey=8730e0e&i=tt3896198')
+  .onGet('http://www.omdbapi.com/?apikey=c5450c03&i=tt3896198')
   .replyOnce(withMovie(0))
-  .onGet('http://www.omdbapi.com', { params: { t: 'baby driver', apiKey: '8730e0e' }})
+  .onGet('http://www.omdbapi.com', { params: { t: 'baby driver', apiKey: 'c5450c03' }})
   .replyOnce(withMovie(1))
-  .onGet('http://www.omdbapi.com/', { params: { t: 'baby driver', apiKey: '8730e0e' }})
+  .onGet('http://www.omdbapi.com/', { params: { t: 'baby driver', apiKey: 'c5450c03' }})
   .replyOnce(withMovie(1))
-  .onGet('http://www.omdbapi.com/?t=baby%20driver&apikey=8730e0e')
+  .onGet('http://www.omdbapi.com/?t=baby%20driver&apikey=c5450c03')
   .replyOnce(withMovie(1))
-  .onGet('http://www.omdbapi.com/?apikey=8730e0e&t=baby%20driver')
+  .onGet('http://www.omdbapi.com/?apikey=c5450c03&t=baby%20driver')
   .replyOnce(withMovie(1))
 
 const expect = chai.expect;
