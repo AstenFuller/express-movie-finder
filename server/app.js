@@ -44,7 +44,7 @@ app.get('/', (req, res) => {
         }
     }
     else {
-        res.send('Look for a movie');
+        res.send('Look for a movie example: /?i=tt3896198 or /?t=baby driver');
     }
 });
 
