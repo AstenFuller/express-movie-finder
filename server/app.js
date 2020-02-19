@@ -43,6 +43,9 @@ app.get('/', (req, res) => {
             .catch((err) => console.log(err))
         }
     }
+    else {
+        res.send('Look for a movie');
+    }
 });
 
 
