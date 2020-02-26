@@ -3,6 +3,7 @@ require('dotenv').config();
 const express = require('express');
 const morgan = require('morgan');
 const axios = require('axios');
+const instance = axios.create();
 
 const app = express();
 
@@ -16,7 +17,7 @@ app.get('/', (req, res) => {
             res.send(cache[req.query.i])
             console.log('being sent from cache')
         } else {
-            axios({
+            instance({
                 url: `http://omdbapi.com/?i=${req.query.i}&apikey=${process.env.OMDB_API_KEY}`,
                 method: 'get'
             })
@@ -32,7 +33,7 @@ app.get('/', (req, res) => {
             res.send(cache[req.query.t.toLowerCase()])
             console.log('being sent from cache')
         } else {
-            axios({
+            instance({
                 url: `http://omdbapi.com/?t=${req.query.t}&apikey=${process.env.OMDB_API_KEY}`,
                 method: 'get'
             })
